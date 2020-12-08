@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo parnier</title>
+</head>
+<body>
+    <h1>Cart liste </h1>
+    <ul id='corp'>
+
+    </ul>    
+    <script>
+        const UIListe = document.getElementById('corp')
+        let liste =[];
+        let answer ;
+        
+        while(true){
+            answer = prompt('Add product or tap exit')
+            if(answer == 'exit') break;
+            liste.push(answer)
+        }
+        console.log(liste)
+        liste.forEach(function (item){
+            UIListe.innerHTML += `<li> ${item} </li>`
+        })
+    </script>
+</body>
+</html>
